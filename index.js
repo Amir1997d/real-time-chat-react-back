@@ -9,9 +9,10 @@ const io = socketIo(server, {
   transports: ["websocket", "polling"]
 });
 
-const sequelize = new Sequelize('task6db', '', '', {
-  host: 'localhost',
-  dialect: 'postgres',
+const sequelize = new Sequelize('task6db', 'task6db_user', 'pqDyCYOz0jMF0ozcWiP0U3gh34i6toTU', {
+    host: 'dpg-cka61vfs0fgc73angivg-a',
+    port: 5432,
+    dialect: 'postgres',
 });
 
 const Message = sequelize.define('message', {
